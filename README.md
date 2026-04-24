@@ -22,8 +22,8 @@ This repository contains the source code for a multi-fidelity surrogate modellin
 | `Data_Extract.py` | OpenFOAM data reader (surfaces, lines, force coefficients) |
 | `Font.py` | Matplotlib font and size configuration |
 | `model.py` | Additional model definitions |
-| `profile_cnn.py` | 1D velocity profile CNN (single-fidelity baseline) |
-| `slice_cnn.py` | 2D velocity slice CNN (single-fidelity baseline) |
+| `profile_cnn.py` | MF 1D velocity profile reconstruction pipeline (uses `mfCNN`) |
+| `slice_cnn.py` | MF 2D flow slice reconstruction pipeline (uses `mfCNN`) |
 
 ---
 
@@ -33,8 +33,8 @@ This repository contains the source code for a multi-fidelity surrogate modellin
 |---|---|---|---|
 | MF-MLP | Multi-layer perceptron | Yaw angle α | Cd₂, Probe velocity |
 | MF-GPR | Gaussian Process Regression | Yaw angle α | Cd₂, Probe velocity |
-| MF-ProfileCNN | Residual 1D CNN + FiLM | RANS velocity profile | LES velocity profile |
-| MF-SliceCNN | U-Net + FiLM | RANS 2D flow slice | LES 2D flow slice |
+| MF-ProfileCNN | Residual 1D CNN + FiLM (`mfCNN` + `profile_cnn.py`) | RANS velocity profile | LES velocity profile |
+| MF-SliceCNN | U-Net + FiLM (`mfCNN` + `slice_cnn.py`) | RANS 2D flow slice | LES 2D flow slice |
 
 ---
 
@@ -42,8 +42,8 @@ This repository contains the source code for a multi-fidelity surrogate modellin
 
 Training and evaluation data are from the following sources. Please cite both if you use this work:
 
-**Paper:**
-> A. Mole, "Multi-Fidelity Surrogate Modelling of Wall Mounted Cubes," *Research Square*, 2022, doi: [10.21203/rs.3.rs-2118035/v1](https://doi.org/10.21203/rs.3.rs-2118035/v1).
+**Paper (preprint):**
+> A. Mole, "Multi-Fidelity Surrogate Modelling of Wall Mounted Cubes," *Research Square* (preprint), 2022, doi: [10.21203/rs.3.rs-2118035/v1](https://doi.org/10.21203/rs.3.rs-2118035/v1).
 
 **Dataset (CC-BY-4.0):**
 > A. Mole, "Dataset for paper: Multi-Fidelity Surrogate Modelling of Wall Mounted Cubes," *Zenodo*, 2022, doi: [10.5281/zenodo.7319244](https://doi.org/10.5281/zenodo.7319244).
@@ -66,7 +66,7 @@ Data/
 ## Requirements
 
 ```bash
-pip install numpy pandas matplotlib torch torchvision scikit-learn scipy pillow
+pip install numpy pandas matplotlib torch scikit-learn scipy pillow
 ```
 
 | Package | Version tested | Purpose |
@@ -74,7 +74,7 @@ pip install numpy pandas matplotlib torch torchvision scikit-learn scipy pillow
 | `numpy` | ≥1.23 | Numerical arrays |
 | `pandas` | ≥1.5 | Data loading and tabulation |
 | `matplotlib` | ≥3.6 | Visualisation |
-| `torch` | ≥1.13 | MLP / CNN training (GPU optional) |
+| `torch` | ≥1.13 | MLP / CNN training (GPU optional, CPU supported) |
 | `scikit-learn` | ≥1.1 | GPR (optional, MF-GPR mode only) |
 | `scipy` | ≥1.9 | Interpolation |
 | `pillow` | ≥9.0 | Image I/O |
