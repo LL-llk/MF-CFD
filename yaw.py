@@ -302,7 +302,6 @@ def plot_yaw(ax, ax2, variable, alpha_grid, pred_L, pred_H, pred_MF, met, pts):
     ax.set_xlabel(r"$\alpha$ (deg)")
     ax.grid(True, alpha=0.25)
 
-    # parity line: sort by RANS value so curve doesn't zigzag
     x_map = yL_m
     y_map = yMF_m
     sort_idx = np.argsort(x_map)
