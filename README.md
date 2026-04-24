@@ -66,8 +66,18 @@ Data/
 ## Requirements
 
 ```bash
-pip install numpy pandas matplotlib torch scikit-learn scipy pillow
+pip install numpy pandas matplotlib torch torchvision scikit-learn scipy pillow
 ```
+
+| Package | Version tested | Purpose |
+|---|---|---|
+| `numpy` | ≥1.23 | Numerical arrays |
+| `pandas` | ≥1.5 | Data loading and tabulation |
+| `matplotlib` | ≥3.6 | Visualisation |
+| `torch` | ≥1.13 | MLP / CNN training (GPU optional) |
+| `scikit-learn` | ≥1.1 | GPR (optional, MF-GPR mode only) |
+| `scipy` | ≥1.9 | Interpolation |
+| `pillow` | ≥9.0 | Image I/O |
 
 ---
 
@@ -82,4 +92,10 @@ python yaw.py
 ```bash
 python fields.py
 python Visualiation_U.py
+```
+
+**1D profile and 2D slice reconstruction:**
+```bash
+python profile_cnn.py   # MF 1D velocity profile CNN
+python slice_cnn.py     # MF 2D flow slice CNN
 ```
