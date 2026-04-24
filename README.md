@@ -96,6 +96,6 @@ python Visualiation_U.py
 
 **1D profile and 2D slice reconstruction:**
 ```bash
-python profile_cnn.py   # MF 1D velocity profile CNN
-python slice_cnn.py     # MF 2D flow slice CNN
+python profile_cnn.py   
+python slice_cnn.py    
 ```
