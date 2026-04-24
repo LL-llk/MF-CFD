@@ -1,0 +1,42 @@
+# CFD simulation data (too large for GitHub)
+Data/
+Multi_Fidelity_Tandem_Cube_Data/
+
+# Model outputs and generated files
+figures/
+animations/
+checkpoints/
+models/
+图片输出/
+privouse graph/
+Diagrams/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# PyTorch model files
+*.pt
+*.pth
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archived code (local only)
+代码存档/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs and temp
+*.log
+*.tmp
