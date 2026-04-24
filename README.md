@@ -1,6 +1,6 @@
 # Machine-learning Based Multi-fidelity Surrogate Modelling for Computational Fluid Dynamics in Tandem-body Configuration
 
-**Linkai Liu** — Final Year Dissertation
+**Linkai Liu** 
 
 ---
 
