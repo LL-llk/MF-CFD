@@ -40,12 +40,15 @@ This repository contains the source code for a multi-fidelity surrogate modellin
 
 ## Data
 
-Training and evaluation data are sourced from:
+Training and evaluation data are from the following sources. Please cite both if you use this work:
 
-> A. Mole, **Multi-Fidelity-Surrogate**, GitHub repository, 2024.
-> [https://github.com/admole/Multi-Fidelity-Surrogate](https://github.com/admole/Multi-Fidelity-Surrogate)
+**Paper:**
+> A. Mole, "Multi-Fidelity Surrogate Modelling of Wall Mounted Cubes," *Research Square*, 2022, doi: [10.21203/rs.3.rs-2118035/v1](https://doi.org/10.21203/rs.3.rs-2118035/v1).
 
-The dataset contains OpenFOAM CFD simulations of two tandem cubes and is not redistributed here. Please refer to the original repository for access and licensing.
+**Dataset (CC-BY-4.0):**
+> A. Mole, "Dataset for paper: Multi-Fidelity Surrogate Modelling of Wall Mounted Cubes," *Zenodo*, 2022, doi: [10.5281/zenodo.7319244](https://doi.org/10.5281/zenodo.7319244).
+
+The data is not redistributed in this repository. See the original dataset for access and licensing terms.
 
 - **RANS** (low-fidelity): 21 yaw angles — 0°, 2°, 4°, …, 40°
 - **LES** (high-fidelity): 7 yaw angles — 0°, 5°, 10°, 15°, 20°, 25°, 30°
